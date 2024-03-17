@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+}
+
+:root {
+
+--White: hsl(0, 0%, 100%);
+--Light-pink: hsl(275, 100%, 97%);
+--Grayish-purple: hsl(292, 16%, 49%);
+--Dark-purple: hsl(292, 42%, 14%);
+
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: var(--Light-pink);
+}
+
+.containerr {
+    background-image: url(../assets/images/background-pattern-desktop.svg);
+    height: 35vh;
+}
+
+.maincard {
+    margin: 0 auto;
+    flex-direction: column;
+    position: relative;
+    top: -5rem;
+    background-color: var(--White);
+    border-radius: 1rem;
+}
+
+
+.title {
+    color: var(--Dark-purple);
+    align-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    
+}
+
+.iconStar {
+    width: 3rem;
+    justify-content: center;
+    padding-left: 1.2rem;
+    padding-bottom: 10px;
+}
+
+.accordion {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 100%;
+    gap: 1rem;
+    border: none;
+}
+
+button {
+    font-weight: 600;
+}
+h5 {
+    font-weight: 600;
+    cursor: pointer;
+}
+h5:hover {
+    color: rgb(211, 15, 211);
+}
+
+.accordion h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.accordion h3 img {
+    cursor: pointer;
+    padding-left: 12px;
+}
+
+p {
+    padding-bottom: 20px;
+    border-bottom: 0.01mm solid rgb(243, 243, 243);
+}
+
+.accordion-button::after {
+    /* Substitua o URL pelo seu ícone personalizado */
+    background-image: url('../assets/images/icon-plus.svg');
+  }
+  
+  .accordion-button:not(.collapsed)::after {
+    /* Substitua o URL pelo seu ícone personalizado para o estado 'não colapsado' */
+    background-image: url('../assets/images/icon-minus.svg');
+    transform: rotate(180deg); /* Se desejar que o ícone gire quando expandido */
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: inherit;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  button.accordion-button:focus {
+    box-shadow: none; /* Remove a sombra */
+  }
